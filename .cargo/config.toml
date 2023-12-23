@@ -1,0 +1,16 @@
+[target.xtensa-esp32-none-elf]
+runner = "espflash flash --monitor"
+
+[test]
+rustflags = ["-C", "link-arg=-nostartfiles", "-C", "link-arg=-Wl,-Tlinkall.x"]
+target = "xtensa-esp32-none-elf"
+
+[build]
+rustflags = ["-C", "link-arg=-nostartfiles", "-C", "link-arg=-Wl,-Tlinkall.x"]
+target = "xtensa-esp32-none-elf"
+
+[unstable]
+build-std = ["core", "alloc"]
+
+[target.'cfg(any(target_arch = "riscv32", target_arch = "xtensa"))']
+runner = "espflash flash --baud=921600 --monitor /dev/cu.usbserial-0001"

@@ -1,0 +1,14 @@
+[package]
+name = "espo2"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+esp32-hal = "0.17.0"
+esp-println = { version = "0.7.0", features = ["esp32"] }
+esp-backtrace = { version = "0.9.0", features = [
+    "esp32",
+    "panic-handler",
+    "exception-handler",
+    "print-uart",
+] }
