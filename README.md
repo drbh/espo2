@@ -1,5 +1,8 @@
 # espo2
 
+<img src="https://github.com/drbh/espo2/assets/9896130/fcd2c2d0-7c7f-4ae0-a994-92a5df573a8d" width="600px" />
+
+
 What do you get when you combine an ESP32, a SCD30 CO₂ sensor and Rust?
 
 You get `espo2`
